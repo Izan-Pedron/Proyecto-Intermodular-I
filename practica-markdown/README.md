@@ -1,36 +1,42 @@
 <!--
   Práctica 3: Creación de un documento Markdown
-  Proyecto Intermodular I - 1º ASIR
+  Proyecto Intermodular I — 1º ASIR — Curso 2026/2027
   Autor: Izan Pedron
-  Esto es un comentario de Markdown: no se ve al renderizar el documento.
+  Los comentarios como este no se ven al renderizar el documento.
 -->
 
 # Cómo empezar a jugar en CachyOS
 
 **Izan Pedron** — *1º ASIR*
 
-CachyOS es una distribución de Linux basada en Arch y pensada para jugar.
-Esta guía explica los pasos básicos para dejarla lista en una tarde.
+---
 
-Antes jugar en Linux era complicado.
-Hoy ***ya casi no hay que configurar nada***, y esta guía lo demuestra.
+## 1. De qué va esta guía
 
-## 1. Qué trae CachyOS ya preparado
+**CachyOS** es una distribución de Linux basada en [Arch Linux](https://archlinux.org/)
+y preparada para jugar. Esta guía explica los pasos básicos para dejarla lista.
 
-Estas cosas vienen hechas de fábrica, así que no hay que tocarlas:
+> Antes, jugar en Linux era complicado.
+> Hoy ***ya casi no hay que configurar nada***, y esta guía lo demuestra.
+
+### 1.1. Lo que ya viene hecho
+
+Estas cosas vienen de fábrica, así que no hay que tocarlas:
 
 - El **kernel** ya optimizado para juegos.
 - Las **librerías de 32 bits** que necesitan los juegos antiguos.
 - Los **controladores de AMD e Intel** ya instalados.
 
-Si tienes una gráfica **NVIDIA**, el controlador se instala desde la aplicación
-*CachyOS Hello*, que se abre al arrancar el sistema.
+Si la gráfica es **NVIDIA**, el controlador se instala desde la aplicación
+*CachyOS Hello*, que se abre sola al arrancar el sistema.
+
+---
 
 ## 2. Instalar los programas de juegos
 
 En Arch, un *meta-paquete* es un paquete que no trae programas, solo una lista
-de lo que hay que instalar. CachyOS tiene uno para juegos, y con un solo
-comando lo deja todo listo:
+de lo que hay que instalar. CachyOS tiene uno para juegos y con un solo comando
+lo deja todo listo:
 
 ```bash
 sudo pacman -S --needed cachyos-gaming-meta cachyos-gaming-applications
@@ -38,7 +44,9 @@ sudo pacman -S --needed cachyos-gaming-meta cachyos-gaming-applications
 
 ![Terminal instalando los programas de juegos](img/01-instalar-juegos.png)
 
-Con eso se instalan Steam, Wine, Heroic, MangoHud y GameMode.
+Con eso se instalan **Steam**, **Wine**, **Heroic**, **MangoHud** y **GameMode**.
+
+---
 
 ## 3. Activar Proton en Steam
 
@@ -48,9 +56,14 @@ activarlo a mano:
 
 1. Abrir Steam e iniciar sesión.
 2. Entrar en **Ajustes → Compatibilidad**.
-3. Activar *Habilitar Steam Play para todos los títulos* y reiniciar Steam.
+3. Activar *Habilitar Steam Play para todos los títulos*.
+4. Reiniciar Steam.
 
-Desde ese momento, los juegos de la biblioteca se pueden instalar y jugar.
+Desde ese momento, los juegos de la biblioteca ya se pueden instalar y jugar.
+Los juegos de **Epic Games** y **GOG** no están en Steam: para esos se usa
+*Heroic*, que hace lo mismo pero con sus tiendas.
+
+---
 
 ## 4. Ver los FPS mientras juegas
 
@@ -64,19 +77,16 @@ gamemoderun mangohud %command%
 
 ![Opciones de lanzamiento de Steam](img/02-opciones-lanzamiento.png)
 
-`mangohud` muestra un panel con los FPS y la temperatura, y `gamemoderun`
-pone la CPU en modo rendimiento mientras juegas.
+Cada palabra hace una cosa:
 
-![Juego con el panel de MangoHud](img/03-mangohud-en-juego.png)
+- `mangohud` muestra un panel con los FPS y la temperatura.
+- `gamemoderun` pone la CPU en modo rendimiento mientras juegas.
 
-## 5. Juegos que no son de Steam
+![Panel de MangoHud durante una partida](img/03-mangohud-en-juego.png)
 
-**Heroic** es un programa que inicia sesión en Epic Games y GOG, descarga los
-juegos y los ejecuta con Proton igual que Steam.
+---
 
-![Biblioteca de juegos en Heroic](img/04-heroic.png)
-
-## 6. Saber si un juego funciona
+## 5. Saber si un juego funciona
 
 Antes de instalar un juego conviene mirarlo en [ProtonDB](https://www.protondb.com/),
 una web donde los usuarios cuentan si funciona y cómo. Usa medallas:
@@ -88,14 +98,16 @@ una web donde los usuarios cuentan si funciona y cómo. Usa medallas:
 | Plata | Funciona con fallos pequeños | Se puede jugar igual |
 | Borked | No funciona | Buscar otro juego |
 
-### 6.1. Lo que no va a funcionar
+### 5.1. Lo que no va a funcionar
 
 Los juegos con *anticheat* que el fabricante no permite en Linux no arrancan,
 como **Valorant**, **Fortnite** o **Call of Duty**. No es un fallo de CachyOS:
-es una decisión de la empresa del juego.
+es una decisión de la empresa del juego, así que no hay ajuste que lo arregle.
 
-<!-- Para separar párrafos se deja una línea en blanco; para cortar la línea
-     dentro del mismo párrafo se dejan dos espacios al final, como aquí abajo. -->
+<!-- Entre párrafos se deja una línea en blanco. Para cortar la línea dentro
+     del mismo párrafo se dejan dos espacios al final, como en el pie. -->
 
-Práctica de **Proyecto Intermodular I**.  
-Curso 2026/2027 — 1º ASIR.
+---
+
+Práctica 3 — *Creación de un documento Markdown*.  
+Proyecto Intermodular I — 1º ASIR — Curso 2026/2027.
